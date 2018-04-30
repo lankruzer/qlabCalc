@@ -1,6 +1,6 @@
 <template>
   <div class="authorization">
-    <h1>Добрый день!</h1>
+    <h1>Добрый день! 123</h1>
     <h2>Для доступа к расчёту стоимости проекта введите логин и пароль:</h2>
     <form action="#" method="post">
       <label>
@@ -31,9 +31,9 @@ export default {
   },
   methods: {
     authorization: function (event) {
-      event.preventDefault();
+      event.preventDefault()
       if (this.currLogin === md5(this.login) && this.currPassword === md5(this.password)) {
-        localStorage.setItem('auth', 'true');
+        localStorage.setItem('auth', 'true')
         this.$router.push('/jsonCalc')
       } else {
         alert('Неверный логин или пароль!')
