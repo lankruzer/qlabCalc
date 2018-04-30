@@ -1,5 +1,8 @@
 <template>
     <div class="calculate">
+
+      <router-link to="jsonCalc" class="btn">Json Calculate</router-link>
+
       <h1>Расчёт стоимости проекта</h1>
       <form action="#" method="post">
         <label>
@@ -297,7 +300,7 @@ export default {
     }
   },
   computed: {
-    //Prototype
+    // Prototype
     projectCostPrototypeSoc: function () {
       return this.projectCostServiceSoc(this.projectCostPrototype, this.projectCostSocPercent)
     },
@@ -331,7 +334,7 @@ export default {
     projectCostPrototypeCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostPrototypeCompanyGet, this.projectCostPrototypeCompanyClp, this.projectCostPrototypeCompanyTax)
     },
-    //Design
+    // Design
     projectCostDesignSoc: function () {
       return this.projectCostServiceSoc(this.projectCostDesign, this.projectCostSocPercent)
     },
@@ -365,7 +368,7 @@ export default {
     projectCostDesignCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostDesignCompanyGet, this.projectCostDesignCompanyClp, this.projectCostDesignCompanyTax)
     },
-    //Front
+    // Front
     projectCostFrontSoc: function () {
       return this.projectCostServiceSoc(this.projectCostFront, this.projectCostSocPercent)
     },
@@ -399,7 +402,7 @@ export default {
     projectCostFrontCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostFrontCompanyGet, this.projectCostFrontCompanyClp, this.projectCostFrontCompanyTax)
     },
-    //Backend
+    // Backend
     projectCostBackSoc: function () {
       return this.projectCostServiceSoc(this.projectCostBack, this.projectCostSocPercent)
     },
@@ -433,7 +436,7 @@ export default {
     projectCostBackCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostBackCompanyGet, this.projectCostBackCompanyClp, this.projectCostBackCompanyTax)
     },
-    //Google
+    // Google
     projectCostGoogleSoc: function () {
       return this.projectCostServiceSoc(this.projectCostGoogle, this.projectCostSocPercent)
     },
@@ -467,7 +470,7 @@ export default {
     projectCostGoogleCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostGoogleCompanyGet, this.projectCostGoogleCompanyClp, this.projectCostGoogleCompanyTax)
     },
-    //Yandex
+    // Yandex
     projectCostYandexSoc: function () {
       return this.projectCostServiceSoc(this.projectCostYandex, this.projectCostSocPercent)
     },
@@ -501,7 +504,7 @@ export default {
     projectCostYandexCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostYandexCompanyGet, this.projectCostYandexCompanyClp, this.projectCostYandexCompanyTax)
     },
-    //SEO
+    // SEO
     projectCostSEOSoc: function () {
       return this.projectCostServiceSoc(this.projectCostSEO, this.projectCostSocPercent)
     },
@@ -535,7 +538,7 @@ export default {
     projectCostSEOCompanyClean: function () {
       return this.projectCostServiceCompanyClean(this.projectCostSEOCompanyGet, this.projectCostSEOCompanyClp, this.projectCostSEOCompanyTax)
     },
-    //Result
+    // Result
     projectResultWorkersPay: function () {
       return (Math.round((
         (+this.projectCostPrototype)
@@ -737,7 +740,9 @@ export default {
     box-sizing: border-box;
     font-size: 18px;
     letter-spacing: 1.5px;
+    color: #2c3e50;
     background-color: #42b983;
+    text-decoration: none;
     cursor: pointer;
     border: 0;
     transition: .25s;

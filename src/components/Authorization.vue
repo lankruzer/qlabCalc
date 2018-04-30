@@ -34,7 +34,7 @@ export default {
       event.preventDefault()
       if (this.currLogin === md5(this.login) && this.currPassword === md5(this.password)) {
         localStorage.setItem('auth', 'true');
-        this.$router.push('/calc')
+        this.$router.push('/jsonCalc')
       } else {
         alert('Неверный логин или пароль!')
       }
@@ -42,7 +42,7 @@ export default {
   },
   created: function () {
     if (localStorage.getItem('auth')) {
-      this.$router.push('/calc')
+      this.$router.push('/jsonCalc')
     }
   }
 }
