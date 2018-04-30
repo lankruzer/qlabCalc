@@ -1,6 +1,6 @@
 <template>
   <div class="authorization">
-    <h1>Добрый день! 123</h1>
+    <h1>Добрый день!</h1>
     <h2>Для доступа к расчёту стоимости проекта введите логин и пароль:</h2>
     <form action="#" method="post">
       <label>
