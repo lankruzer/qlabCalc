@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     authorization: function (event) {
-      event.preventDefault()
+      event.preventDefault();
       if (this.currLogin === md5(this.login) && this.currPassword === md5(this.password)) {
         localStorage.setItem('auth', 'true');
         this.$router.push('/jsonCalc')
