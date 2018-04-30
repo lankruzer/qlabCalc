@@ -2,12 +2,18 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <Price v-if="this.$route.name !== 'Authorization'" ></Price>
   </div>
 </template>
 
 <script>
+import Price from '@/components/Price'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Price
+  }
 }
 </script>
 
